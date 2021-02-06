@@ -1,7 +1,11 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import { Link, NavLink } from 'react-router-dom'
+import { AuthContext } from '../../auth/AuthContext'
 
 export const Navbar = () => {
+
+	const { user } = useContext(AuthContext);
+
 	return (
 		<nav className="navbar navbar-expand navbar-dark bg-dark">
 			<div className="container-fluid">
@@ -41,11 +45,18 @@ export const Navbar = () => {
 							</NavLink>
 						</li>					
 					</ul>
-					<NavLink className="btn btn-outline-warning"
-									 exact
-								 	 to="/login" >
-									 Logout
-					</NavLink>
+
+					<div className="d-flex align-items-center">
+						<p className="text-info m-0 nav-link">
+							{ user.name }
+						</p>
+
+						<NavLink className="btn btn-outline-warning"
+										exact
+										to="/login" >
+										Logout
+						</NavLink>
+					</div>
 				</div>
 			</div>
 		</nav>

@@ -1,8 +1,20 @@
-import React from 'react'
+import React, { useContext } from 'react';
+import { AuthContext } from '../../auth/AuthContext';
+import { types } from '../../types/types';
+
 
 export const LoginScreen = ({history}) => {
 
+    const { dispatch } = useContext(AuthContext);
+
     const handleClick = ()=> {
+        dispatch({
+            type : types.login,
+            payload : {
+                name: 'Javier Soto'
+            }
+        });
+
         //Con el push nos dirigimos hacia la ruta que le pasamos al metodo
         //con la opcion de poder dar en la flecha atras del navegador y que
         //nos regrese a la pantalla anterior
