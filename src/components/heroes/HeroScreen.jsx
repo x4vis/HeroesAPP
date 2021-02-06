@@ -23,7 +23,6 @@ export const HeroScreen = ({history}) => {
 	}
 
 	const {
-		id,
 		superhero,
 		alter_ego,
 		publisher,

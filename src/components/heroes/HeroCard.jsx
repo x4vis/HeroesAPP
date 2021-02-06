@@ -10,7 +10,7 @@ export const HeroCard = ({
 }) => {
   return (
     <div className="col">
-      <div className="card" style={ { maxWidth: 540 } }>
+      <div className="card mx-auto" style={ { maxWidth: 540 } }>
         <div className="row g-0">
           <div className="col-md-4">
             <img className="card-img" 
