@@ -5,6 +5,7 @@ import { types } from '../../types/types';
 
 export const LoginScreen = ({history}) => {
 
+    const lastPath = localStorage.getItem('lastPath') || '/';
     const { dispatch } = useContext(AuthContext);
 
     const handleClick = ()=> {
@@ -24,7 +25,7 @@ export const LoginScreen = ({history}) => {
         //Con el replace, la diferencia es que al darle en la flecha hacia
         //atras del navegador no podremos regresar a la pantalla desde donde 
         //hicimos la redireccion
-        history.replace('/');
+        history.replace(lastPath);
     }
 
     return (
