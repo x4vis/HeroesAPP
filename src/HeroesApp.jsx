@@ -1,7 +1,7 @@
-import React, { useEffect, useReducer } from 'react'
-import { AuthContext } from './auth/AuthContext'
-import { authReducer } from './auth/authReducer'
-import { AppRouter } from './components/routers/AppRouter'
+import React, { useEffect, useReducer } from 'react';
+import { AuthContext } from './auth/AuthContext';
+import { authReducer } from './auth/authReducer';
+import { AppRouter } from './components/routers/AppRouter';
 
 const init = () => {
 	return JSON.parse(localStorage.getItem('user')) || { logged: false }
